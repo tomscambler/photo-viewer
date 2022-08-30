@@ -13,8 +13,8 @@ function App() {
       <h1>
         Photo Viewer
       </h1>
-      <PhotoViewer src={"https://picsum.photos/id/600/1600/900.jpg"}/>
-      <ImageSelector/>
+        <PhotoViewer picture_url={"https://picsum.photos/id/600/1600/900.jpg"} border_color={"red"}/>
+        <ImageSelector/>
     </div>
   );
 }

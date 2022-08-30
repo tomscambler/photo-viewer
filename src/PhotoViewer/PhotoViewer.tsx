@@ -1,9 +1,9 @@
 import React from "react";
 
-export function PhotoViewer(){
+export function PhotoViewer(prop: { picture_url: string; border_color: string;}){
     return (
         <div>
-            <img className="my-class" src="https://picsum.photos/300/300" alt="lorem picsum"/>
+            <img className="main_picture" src={prop.picture_url} alt="lorem picsum" width="50%" border-color={prop.border_color}/>
         </div>
     );
 }
