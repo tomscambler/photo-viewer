@@ -14,6 +14,7 @@ function App() {
       <h1>
         Photo Viewer
       </h1>
+    
         <PhotoViewer imageUrl={imageUrl} />
         <ImageSelector setImageUrl={setImageUrl}/>
     </div>
