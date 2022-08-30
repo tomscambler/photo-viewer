@@ -1,13 +1,11 @@
 import React, { useState } from "react";
 
-export function ImageSelector(){
-
-    const [selectedImage, updateImage] = useState("https://picsum.photos/id/600/1600/900.jpg")
+export function ImageSelector({setImageUrl}: {setImageUrl: (imageUrl:string) => void}){
 
     const brokenImages = [
         1, 24, 32, 36, 44, 47
     ];
-    
+
     function getImageUrls() {
         const urls = [];
     
@@ -17,17 +15,19 @@ export function ImageSelector(){
                 urls.push(`https://picsum.photos/id/6${imageNumberString}/1600/900.jpg`)
             }
         }
-    
         return urls;
     }
     
-     return <div>
-        
-     {getImageUrls().map(urls =>(
-     <button onClick = {() =>updateImage(urls)}>
-         <img src={urls} key= {urls} width="300"/></button>))}
-       
+     return (
+        <div>
+            {getImageUrls().map(url =>(
+                <button onClick={ () => setImageUrl(url)}>
+                    <img src={url} key= {url} width="100px"/>
+                </button>
+                )
+            )}
         </div>
+     );
 }
 
     

@@ -1,9 +1,9 @@
 import React from "react";
 
-export function PhotoViewer(prop: { picture_url: string;}){
+export function PhotoViewer({imageUrl}: {imageUrl:string}){
     return (
         <div>
-            <img className="main_picture" src={prop.picture_url} alt="lorem picsum" width="50%" />
+            <img className="main_picture" src={imageUrl} alt="lorem picsum" width="50%" />
         </div>
     );
 }
